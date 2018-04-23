@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="DXSampleNotificationSevice.View.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" 
+    xmlns:ViewModel="clr-namespace:DXSampleNotificationSevice.ViewModel"  
+    mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" 
+    DataContext="{dxmvvm:ViewModelSource Type={x:Type ViewModel:MainViewModel}}">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="CustomNotificationTemplate">
+            <Border Background="White" BorderThickness="1" BorderBrush="Black">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock HorizontalAlignment="Left" Text="{Binding Caption}" Foreground="Blue" FontSize="20" FontWeight="Bold" Margin="5"/>
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding Content}" Foreground="Black" FontSize="16" Margin="3"/>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <dxmvvm:Interaction.Behaviors>
+        <dxmvvm:NotificationService x:Name="ServiceWithDefaultNotifications" ApplicationId="sample_notification_app" PredefinedNotificationTemplate="ShortHeaderAndTwoTextFields"/>
+        <dxmvvm:NotificationService x:Name="ServiceWithCustomNotifications" CustomNotificationTemplate="{StaticResource CustomNotificationTemplate}" CustomNotificationPosition="BottomRight" />
+    </dxmvvm:Interaction.Behaviors>
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Default notification" Command="{Binding ShowDefaultNotificationCommand}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"/>
+            <Button Content="Custom notification" Command="{Binding ShowCustomNotificationCommand}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
