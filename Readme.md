@@ -27,10 +27,4 @@ DevExpress.Data.ShellHelper.TryCreateShortcut("sample_notification_app", "DXSamp
 </dxmvvm:Interaction.Behaviors>
 ```
 
-
-<p>An advantage of native Windows 8 notifications is that thy can be shown over WinRT applications</p>
-<br><br>
-
 <br/>
-
-
