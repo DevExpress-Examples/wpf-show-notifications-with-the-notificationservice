@@ -1,4 +1,4 @@
-<dx:DXWindow
+<dx:ThemedWindow
 	xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:View="clr-namespace:DXSampleNotificationSevice.View"  
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,4 +7,4 @@
     <Grid>
         <View:MainView />
     </Grid>
-</dx:DXWindow>
+</dx:ThemedWindow>

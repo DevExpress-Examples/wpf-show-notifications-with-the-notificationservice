@@ -15,13 +15,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Data" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Data.Desktop" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Images" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Mvvm" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Printing.Core" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Core" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Themes.Office2019Colorful" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Data" Version="21.2.*-*" />
+    <PackageReference Include="DevExpress.Data.Desktop" Version="21.2.*-*" />
+    <PackageReference Include="DevExpress.Images" Version="21.2.*-*" />
+    <PackageReference Include="DevExpress.Mvvm" Version="21.2.*-*" />
+    <PackageReference Include="DevExpress.Printing.Core" Version="21.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="21.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.Office2019Colorful" Version="21.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="21.2.*-*" />
   </ItemGroup>
 </Project>

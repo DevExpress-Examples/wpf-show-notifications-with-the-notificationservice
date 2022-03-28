@@ -2,9 +2,9 @@
 
 namespace DXSampleNotificationSevice {
     public partial class App : Application {
-        private void OnAppStartup_UpdateThemeName(object sender, StartupEventArgs e) {
-            DevExpress.Xpf.Core.ApplicationThemeHelper.UpdateApplicationThemeName();
+        protected override void OnStartup(StartupEventArgs e) {
             DevExpress.Data.ShellHelper.TryCreateShortcut("sample_notification_app", "DXSampleNotificationSevice");
+            base.OnStartup(e);
         }
     }
 }
