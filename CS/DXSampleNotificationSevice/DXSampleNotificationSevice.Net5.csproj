@@ -23,5 +23,7 @@
     <PackageReference Include="DevExpress.Wpf.Core" Version="21.2.*-*" />
     <PackageReference Include="DevExpress.Wpf.Themes.Office2019Colorful" Version="21.2.*-*" />
     <PackageReference Include="DevExpress.Wpf.Themes.All" Version="21.2.*-*" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    <PackageReference Include="System.Management" Version="4.7.0" />
   </ItemGroup>
 </Project>
