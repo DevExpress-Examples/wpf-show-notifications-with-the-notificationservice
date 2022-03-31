@@ -3,6 +3,7 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	x:Class="DXSampleNotificationSevice.MainWindow"
+	dx:ThemeManager.ThemeName="Office2019Colorful"
 	Title="Notification Service Example" Height="350" Width="525" Icon="{dx:DXImage Image=CheckBox_16x16.png}">
     <Grid>
         <View:MainView />
