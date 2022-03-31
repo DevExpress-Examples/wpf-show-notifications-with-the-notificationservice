@@ -17,7 +17,7 @@
 
 This example demonstrates how to use [NotificationService](https://docs.devexpress.com/WPF/18138/mvvm-framework/services/predefined-set/notificationservice) to create a custom notification that does not depend on the Windows 10/11 notification API.
 
-Use the **NotificationService.CustomNotificationTemplate** property to define a custom notification layout.
+Use the [NotificationService.CustomNotificationTemplate](https://docs.devexpress.com/WPF/DevExpress.Mvvm.UI.NotificationService.CustomNotificationTemplate) property to define a custom notification layout.
 
 ```xaml
 <DataTemplate x:Key="CustomNotificationTemplate">
@@ -29,7 +29,7 @@ Use the **NotificationService.CustomNotificationTemplate** property to define a 
     </Border>
 </DataTemplate>
 ```
-To create a custom notification, use the **NotificationService.CreateCustomNotification** method. This method requires a notification’s View Model as a parameter.
+To create a custom notification, use the [NotificationService.CreateCustomNotification](https://docs.devexpress.com/WPF/DevExpress.Mvvm.UI.NotificationService.CreateCustomNotification(System.Object)) method. This method requires a notification’s View Model as a parameter.
 
 ```cs
 [POCOViewModel]
