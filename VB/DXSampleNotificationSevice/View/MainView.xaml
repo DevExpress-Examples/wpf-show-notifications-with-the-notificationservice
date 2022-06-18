@@ -19,9 +19,13 @@
         </DataTemplate>
     </UserControl.Resources>
     <dxmvvm:Interaction.Behaviors>
-        <dxmvvm:NotificationService CustomNotificationTemplate="{StaticResource CustomNotificationTemplate}" CustomNotificationPosition="BottomRight" />
+        <dxmvvm:NotificationService x:Name="ServiceWithDefaultNotifications" ApplicationId="sample_notification_app" PredefinedNotificationTemplate="ShortHeaderAndTwoTextFields"/>
+        <dxmvvm:NotificationService x:Name="ServiceWithCustomNotifications" CustomNotificationTemplate="{StaticResource CustomNotificationTemplate}" CustomNotificationPosition="BottomRight" />
     </dxmvvm:Interaction.Behaviors>
     <Grid>
-        <Button Content="Show Custom Notification" Command="{Binding ShowCustomNotificationCommand}" VerticalAlignment="Center" Height="30"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Default notification" Command="{Binding ShowDefaultNotificationCommand}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"/>
+            <Button Content="Custom notification" Command="{Binding ShowCustomNotificationCommand}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"/>
+        </StackPanel>
     </Grid>
 </UserControl>

@@ -1,15 +1,26 @@
+﻿Imports System
+Imports System.Collections.Generic
+Imports System.Linq
+Imports System.Text
+Imports System.Windows
 Imports System.Windows.Controls
+Imports System.Windows.Data
+Imports System.Windows.Documents
+Imports System.Windows.Input
+Imports System.Windows.Media
+Imports System.Windows.Media.Imaging
+Imports System.Windows.Navigation
+Imports System.Windows.Shapes
 
 Namespace DXSampleNotificationSevice.View
+	''' <summary>
+	''' Interaction logic for MainView.xaml
+	''' </summary>
+	Partial Public Class MainView
+		Inherits UserControl
 
-    ''' <summary>
-    ''' Interaction logic for MainView.xaml
-    ''' </summary>
-    Public Partial Class MainView
-        Inherits UserControl
-
-        Public Sub New()
-            Me.InitializeComponent()
-        End Sub
-    End Class
+		Public Sub New()
+			InitializeComponent()
+		End Sub
+	End Class
 End Namespace

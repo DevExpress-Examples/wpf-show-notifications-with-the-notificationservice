@@ -1,12 +1,11 @@
-Imports DevExpress.Xpf.Core
+﻿Imports System.Windows
 
 Namespace DXSampleNotificationSevice
+	Partial Public Class MainWindow
+		Inherits DevExpress.Xpf.Core.DXWindow
 
-    Public Partial Class MainWindow
-        Inherits ThemedWindow
-
-        Public Sub New()
-            Me.InitializeComponent()
-        End Sub
-    End Class
+		Public Sub New()
+			InitializeComponent()
+		End Sub
+	End Class
 End Namespace

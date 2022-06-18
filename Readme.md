@@ -12,42 +12,24 @@
 * [CustomNotificationViewModel.cs](./CS/DXSampleNotificationSevice/ViewModel/CustomNotificationViewModel.cs) (VB: [CustomNotificationViewModel.vb](./VB/DXSampleNotificationSevice/ViewModel/CustomNotificationViewModel.vb))
 * [MainViewModel.cs](./CS/DXSampleNotificationSevice/ViewModel/MainViewModel.cs) (VB: [MainViewModel.vb](./VB/DXSampleNotificationSevice/ViewModel/MainViewModel.vb))
 <!-- default file list end -->
-# How To: Use NotificationService to Create Custom Notifications
+# How to: use NotificationService
 
 
-This example demonstrates how to use [NotificationService](https://docs.devexpress.com/WPF/18138/mvvm-framework/services/predefined-set/notificationservice) to create a custom notification that does not depend on the Windows 10/11 notification API.
+This example demonstrates how to use NotificationService to show notifications. NotificationService is used in the same manner as other <a href="https://documentation.devexpress.com/#WPF/CustomDocument16926">services</a>. When the UseWin8NotificationsIfAvailable option is enabled, it's necessary to use an appropriate ApplicationId. <br>This id should be specified in the application shortcut located in the "<em>%APPDATA%\Microsoft\Windows\Start Menu\Programs"</em> directory. This is a requirement of the technology. To create a shortcut with the required application id, you can use our DevExpress.Data.ShellHelper class as shown below:<br>
 
-Use the [NotificationService.CustomNotificationTemplate](https://docs.devexpress.com/WPF/DevExpress.Mvvm.UI.NotificationService.CustomNotificationTemplate) property to define a custom notification layout.
-
-```xaml
-<DataTemplate x:Key="CustomNotificationTemplate">
-    <Border Background="White" BorderThickness="1" BorderBrush="Black">
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <TextBlock HorizontalAlignment="Left" Text="{Binding Caption}" Foreground="Blue" FontSize="20" Margin="5"/>
-            <TextBlock HorizontalAlignment="Center" Text="{Binding Content}" Foreground="Black" FontSize="16" Margin="3"/>
-        </StackPanel>
-    </Border>
-</DataTemplate>
-```
-To create a custom notification, use the [NotificationService.CreateCustomNotification](https://docs.devexpress.com/WPF/DevExpress.Mvvm.UI.NotificationService.CreateCustomNotification(System.Object)) method. This method requires a notification’s View Model as a parameter.
 
 ```cs
-[POCOViewModel]
-public class MainViewModel {
-    protected virtual INotificationService CustomNotificationService { get { return null; } }
-    public async void ShowCustomNotification() {
-        CustomNotificationViewModel vm = ViewModelSource.Create(() => new CustomNotificationViewModel());
-        vm.Caption = "Custom Notification";
-        vm.Content = String.Format("Time: {0}", DateTime.Now);
-        INotification notification = CustomNotificationService.CreateCustomNotification(vm);
-        NotificationResult result = await notification.ShowAsync();
-        ProcessNotificationResult(result);
-    }
-    void ProcessNotificationResult(NotificationResult result) {
-        ...
-    }
-    ...
-}
+DevExpress.Data.ShellHelper.TryCreateShortcut("sample_notification_app", "DXSampleNotificationSevice");
+```
+
+
+<p>Then, assign <em>sample_notification_app</em> to the NotificationService.ApplicationId property:</p>
+
+
+```xaml
+<dxmvvm:Interaction.Behaviors>
+    <dxmvvm:NotificationService x:Name="ServiceWithDefaultNotifications" ApplicationId="sample_notification_app" .../>
+</dxmvvm:Interaction.Behaviors>
 ```
 
 <br/>

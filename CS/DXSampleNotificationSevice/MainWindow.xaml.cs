@@ -1,7 +1,7 @@
-﻿using DevExpress.Xpf.Core;
+﻿using System.Windows;
 
 namespace DXSampleNotificationSevice {
-    public partial class MainWindow : ThemedWindow {
+    public partial class MainWindow : DevExpress.Xpf.Core.DXWindow {
         public MainWindow() {
             InitializeComponent();
         }
