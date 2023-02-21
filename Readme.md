@@ -40,3 +40,7 @@ Once complete, assign *sample_notification_app* to the `NotificationService.Ap
 
 * [Notification Service](https://docs.devexpress.com/WPF/18138/mvvm-framework/services/predefined-set/notificationservice)
 * [UI Services](https://docs.devexpress.com/WPF/17414/mvvm-framework/services)
+
+## More Examples
+
+* [WPF NotificationService - Create Interactive Notifications](https://github.com/DevExpress-Examples/wpf-notificationservice-create-interactive-notifications)
